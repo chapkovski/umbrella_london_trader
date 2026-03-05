@@ -1,6 +1,9 @@
 SHELL := /bin/bash
 
-.PHONY: status-all branch-all pull-all push-all origins-all commit-all
+.PHONY: bootstrap-workspace status-all branch-all pull-all push-all origins-all commit-all
+
+bootstrap-workspace:
+	@./scripts/bootstrap-workspace.sh
 
 status-all:
 	@./scripts/status-all.sh

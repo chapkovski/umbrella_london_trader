@@ -44,6 +44,7 @@ Set oTree `trading_api_base` to `http://localhost:8001`.
 From the workspace root:
 
 ```bash
+make bootstrap-workspace
 make status-all
 make branch-all
 make pull-all
@@ -55,6 +56,7 @@ make commit-all MSG="TL-142: short summary"
 Equivalent scripts:
 
 ```bash
+./scripts/bootstrap-workspace.sh
 ./scripts/status-all.sh
 ./scripts/branch-all.sh
 ./scripts/pull-all.sh
@@ -62,6 +64,12 @@ Equivalent scripts:
 ./scripts/origins-all.sh
 ./scripts/commit-all.sh "TL-142: short summary"
 ```
+
+`bootstrap-workspace` behavior:
+
+- clones missing child repositories into expected folder names,
+- skips already-cloned repos,
+- warns if an existing repo's `origin` does not match the documented remote.
 
 `push-all` safety check:
 
