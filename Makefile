@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: status-all branch-all pull-all origins-all commit-all
+.PHONY: status-all branch-all pull-all push-all origins-all commit-all
 
 status-all:
 	@./scripts/status-all.sh
@@ -10,6 +10,9 @@ branch-all:
 
 pull-all:
 	@./scripts/pull-all.sh
+
+push-all:
+	@./scripts/push-all.sh
 
 origins-all:
 	@./scripts/origins-all.sh

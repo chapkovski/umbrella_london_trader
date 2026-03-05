@@ -47,6 +47,7 @@ From the workspace root:
 make status-all
 make branch-all
 make pull-all
+make push-all
 make origins-all
 make commit-all MSG="TL-142: short summary"
 ```
@@ -57,9 +58,14 @@ Equivalent scripts:
 ./scripts/status-all.sh
 ./scripts/branch-all.sh
 ./scripts/pull-all.sh
+./scripts/push-all.sh
 ./scripts/origins-all.sh
 ./scripts/commit-all.sh "TL-142: short summary"
 ```
+
+`push-all` safety check:
+
+- refuses to push if any child repo has uncommitted changes.
 
 `commit-all` workflow:
 
