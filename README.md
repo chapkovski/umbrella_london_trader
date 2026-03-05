@@ -12,6 +12,12 @@ Child repository remotes:
 - `otree_trader_bridge` -> https://github.com/chapkovski/otree_trader_bridge.git
 - `london_trader_front` -> https://github.com/chapkovski/london_trader_front.git
 
+Quick start (clone missing child repos into this workspace):
+
+```bash
+make bootstrap-workspace
+```
+
 Keep release/version history in each child repository.  
 Use this workspace for local orchestration, shared docs, and cross-repo workflow.
 
